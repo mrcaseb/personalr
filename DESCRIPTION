@@ -1,13 +1,13 @@
 Package: personalr
-Title: What the Package Does (One Line, Title Case)
+Title: Automated Personal Package Setup
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Sebastian",
+           family = "Carl",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "mrcaseb@gmail.com")
+Description: Functions to setup a personal R package that attaches given 
+  libraries and exports personal helper functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
