@@ -87,6 +87,11 @@ package_data <- function(base_path = usethis::proj_get()){
   as.list(desc$get(desc$fields()))
 }
 
+version_spec <- function(x) {
+  x <- gsub("(<=|<|>=|>|==)\\s*", "", x)
+  numeric_version(x)
+}
+
 # Taken from https://github.com/radiant-rstats/radiant.data/blob/m --------
 
 is_string <- function(x) {
