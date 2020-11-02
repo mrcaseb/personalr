@@ -6,12 +6,21 @@ Authors@R:
            family = "Carl",
            role = c("aut", "cre"),
            email = "mrcaseb@gmail.com")
-Description: Functions to setup a personal R package that attaches given 
-  libraries and exports personal helper functions.
+Description: Functions to setup a personal R package that
+    attaches given libraries and exports personal helper functions.
 License: MIT + file LICENSE
+URL: https://github.com/mrcaseb/personalr
+BugReports: https://github.com/mrcaseb/personalr/issues
+Imports: 
+    desc,
+    devtools,
+    glue,
+    purrr,
+    rstudioapi,
+    usethis,
+    utils,
+    xfun
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-URL: https://github.com/mrcaseb/personalr
-BugReports: https://github.com/mrcaseb/personalr/issues
