@@ -82,6 +82,11 @@ check_for_package <- function(package){
   }
 }
 
+package_data <- function(base_path = usethis::proj_get()){
+  desc <- desc::description$new(base_path)
+  as.list(desc$get(desc$fields()))
+}
+
 # Taken from https://github.com/radiant-rstats/radiant.data/blob/m --------
 
 is_string <- function(x) {
@@ -95,6 +100,9 @@ is_empty <- function(x, empty = "\\s*") {
 is_not <- function(x) {
   length(x) == 0 || (length(x) == 1 && is.na(x))
 }
+
+
+# Own stuff ---------------------------------------------------------------
 
 add_template <- function(template_name){
   usethis::use_template(
