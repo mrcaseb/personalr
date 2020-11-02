@@ -6,8 +6,8 @@
 \alias{personalr-package}
 \title{personalr: Automated Personal Package Setup}
 \description{
-Functions to setup a personal R package that attaches given 
-  libraries and exports personal helper functions.
+Functions to setup a personal R package that
+    attaches given libraries and exports personal helper functions.
 }
 \seealso{
 Useful links:

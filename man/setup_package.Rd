@@ -11,6 +11,6 @@ Setup Personal Package
 }
 \examples{
 if (FALSE) {
-  setup_package("..", "mypackage", core = c("dplyr", "nflfastR"))
+  setup_package("..", "mypackage", core = c("dplyr", "glue", "purrr"))
 }
 }
