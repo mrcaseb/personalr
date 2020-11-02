@@ -14,18 +14,29 @@ setup_package <- function(path,
   path <- usethis::create_package(
     glue::glue("{path}/{packagename}"),
     rstudio = rstudioapi::isAvailable(),
-    open = FALSE
+    open = FALSE,
+    fields = list(
+      Version = "1.0.0"
+    )
   )
 
   # move to the correct working directory
   usethis::local_project(path)
 
-  # Add package doc file and Readme.Rmd
+  # Add package doc file
   usethis::use_template(
     "packagename-package.R",
     glue::glue("R/{packagename}-package.R")
   )
-  usethis::use_readme_rmd(open = FALSE)
+
+  # Add Readme as markdown file because we want to keep it easy
+  usethis::use_template(
+    "package-README",
+    "README.md",
+    data = package_data(),
+    open = FALSE,
+    package = "personalr"
+  )
 
   # Add core packages to "Imports" and save core script
   purrr::walk(c(core, "cli", "crayon", "rstudioapi"), use_dependency, "Imports")
@@ -36,7 +47,7 @@ setup_package <- function(path,
   templates <- c("attach", "conflicts", "pipe", "utils", "zzz")
   purrr::walk(templates, add_template)
 
-  # replace some stuff
+  # Use the package name in all templates
   xfun::gsub_dir(
     "personalr_to_replace",
     packagename,
@@ -46,7 +57,6 @@ setup_package <- function(path,
 
   # Now document and install the package
   usethis::ui_todo("Updating documentation and installing {packagename}...")
-
   devtools::document(pkg = path, quiet = TRUE)
   devtools::install(
     pkg = path,
@@ -59,5 +69,3 @@ setup_package <- function(path,
   # Now activate project
   usethis::proj_activate(path)
 }
-
-use_data_raw()
