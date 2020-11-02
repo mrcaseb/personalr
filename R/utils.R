@@ -6,7 +6,7 @@ use_dependency <- function(package, type, min_version = NULL) {
 
   if (package != "R" && !is_installed(package)) {
     usethis::ui_stop(c(
-      "{ui_value(package)} must be installed before you can ",
+      "{usethis::ui_value(package)} must be installed before you can ",
       "take a dependency on it."
     ))
   }
@@ -30,7 +30,7 @@ use_dependency <- function(package, type, min_version = NULL) {
 
   # No existing dependency, so can simply add
   if (!any(existing_dep) || any(is_linking_to)) {
-    usethis::ui_done("Adding {ui_value(package)} to {ui_field(type)} field in DESCRIPTION")
+    usethis::ui_done("Adding {usethis::ui_value(package)} to {usethis::ui_field(type)} field in DESCRIPTION")
     desc::desc_set_dep(package, type, version = version, file = usethis::proj_get())
     return(invisible())
   }
@@ -40,15 +40,15 @@ use_dependency <- function(package, type, min_version = NULL) {
   if (delta < 0) {
     # don't downgrade
     usethis::ui_warn(
-      "Package {ui_value(package)} is already listed in \\
-      {ui_value(existing_type)} in DESCRIPTION, no change made."
+      "Package {usethis::ui_value(package)} is already listed in \\
+      {usethis::ui_value(existing_type)} in DESCRIPTION, no change made."
     )
   } else if (delta == 0 && !is.null(min_version)) {
     # change version
     upgrade <- existing_ver == "*" || numeric_version(min_version) > version_spec(existing_ver)
     if (upgrade) {
       usethis::ui_done(
-        "Increasing {ui_value(package)} version to {ui_value(version)} in DESCRIPTION"
+        "Increasing {usethis::ui_value(package)} version to {usethis::ui_value(version)} in DESCRIPTION"
       )
       desc::desc_set_dep(package, type, version = version, file = usethis::proj_get())
     }
@@ -57,7 +57,7 @@ use_dependency <- function(package, type, min_version = NULL) {
     if (existing_type != "LinkingTo") {
       usethis::ui_done(
         "
-        Moving {ui_value(package)} from {ui_field(existing_type)} to {ui_field(type)} \\
+        Moving {usethis::ui_value(package)} from {usethis::ui_field(existing_type)} to {usethis::ui_field(type)} \\
         field in DESCRIPTION
         "
       )
@@ -94,4 +94,20 @@ is_empty <- function(x, empty = "\\s*") {
 
 is_not <- function(x) {
   length(x) == 0 || (length(x) == 1 && is.na(x))
+}
+
+add_template <- function(template_name){
+  usethis::use_template(
+    glue::glue("{template_name}.R"),
+    glue::glue("R/{template_name}.R"),
+    package = "personalr")
+}
+
+create_core_script <- function(pkgs){
+  paste(
+    'core <- c( \n"',
+    paste0(pkgs, collapse = '",\n"'), '"\n)',
+    collapse = "\n",
+    sep = ""
+  )
 }
