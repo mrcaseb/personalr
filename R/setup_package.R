@@ -1,12 +1,21 @@
 #' Setup Personal Package
+#'
+#' A function to setup a new personal package or update an existing package.
+#'
+#' @param path The path in which the package shall be created.
+#'   If it exists, it is used. If it does not exist, it is created, provided
+#'   that the parent path exists.
+#' @param packagename The name of the newly generated package. It will be
+#'   checked to make sure it meets R package naming conventions.
+#' @param core A vector or list containing package names that shall be attached
+#'   when the newly generated package is loaded. The packages must be installed
+#'   on the current system, otherwise an error will be shown.
 #' @export
 #' @examples
 #' if (FALSE) {
 #'   setup_package("..", "mypackage", core = c("dplyr", "glue", "purrr"))
 #' }
-setup_package <- function(path,
-                          packagename,
-                          core = NULL) {
+setup_package <- function(path, packagename, core = NULL) {
   # check the core vector
   purrr::walk(core, check_for_package)
 

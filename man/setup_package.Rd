@@ -6,8 +6,20 @@
 \usage{
 setup_package(path, packagename, core = NULL)
 }
+\arguments{
+\item{path}{The path in which the package shall be created.
+If it exists, it is used. If it does not exist, it is created, provided
+that the parent path exists.}
+
+\item{packagename}{The name of the newly generated package. It will be
+checked to make sure it meets R package naming conventions.}
+
+\item{core}{A vector or list containing package names that shall be attached
+when the newly generated package is loaded. The packages must be installed
+on the current system, otherwise an error will be shown.}
+}
 \description{
-Setup Personal Package
+A function to setup a new personal package or update an existing package.
 }
 \examples{
 if (FALSE) {
