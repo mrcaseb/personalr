@@ -1,25 +1,25 @@
-mrcaseb_conflicts <- function() {
+personalr_to_replace_conflicts <- function() {
   envs <- grep("^package:", search(), value = TRUE)
   envs <- purrr::set_names(envs)
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  mrcaseb_names <- paste0("package:", mrcaseb_packages())
-  conflicts <- purrr::keep(conflicts, ~ any(.x %in% mrcaseb_names))
+  personalr_to_replace_names <- paste0("package:", personalr_to_replace_packages())
+  conflicts <- purrr::keep(conflicts, ~ any(.x %in% personalr_to_replace_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  structure(conflict_funs, class = "mrcaseb_conflicts")
+  structure(conflict_funs, class = "personalr_to_replace_conflicts")
 }
 
-mrcaseb_conflict_message <- function(x) {
+personalr_to_replace_conflict_message <- function(x) {
   if (length(x) == 0) return("")
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
-    right = "mrcaseb_conflicts()"
+    right = "personalr_to_replace_conflicts()"
   )
 
   pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
@@ -41,8 +41,8 @@ mrcaseb_conflict_message <- function(x) {
 }
 
 
-print.mrcaseb_conflicts <- function(x, ..., startup = FALSE) {
-  cli::cat_line(mrcaseb_conflict_message(x))
+print.personalr_to_replace_conflicts <- function(x, ..., startup = FALSE) {
+  cli::cat_line(personalr_to_replace_conflict_message(x))
 }
 
 

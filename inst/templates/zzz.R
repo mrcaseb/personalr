@@ -4,11 +4,11 @@
     return()
 
   crayon::num_colors(TRUE)
-  mrcaseb_attach()
+  personalr_to_replace_attach()
 
   # if (!"package:conflicted" %in% search()) {
-  #   x <- mrcaseb_conflicts()
-  #   msg(mrcaseb_conflict_message(x), startup = TRUE)
+  #   x <- personalr_to_replace_conflicts()
+  #   msg(personalr_to_replace_conflict_message(x), startup = TRUE)
   # }
 
   msg(cli::rule(right = crayon::bold("Ready to go!")),startup = TRUE)

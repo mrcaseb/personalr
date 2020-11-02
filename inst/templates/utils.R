@@ -1,6 +1,6 @@
 msg <- function(..., startup = FALSE) {
   if (startup) {
-    if (!isTRUE(getOption("mrcaseb.quiet"))) {
+    if (!isTRUE(getOption("personalr_to_replace.quiet"))) {
       packageStartupMessage(text_col(...))
     }
   } else {
@@ -24,14 +24,14 @@ text_col <- function(x) {
 
 }
 
-mrcaseb_packages <- function(include_self = TRUE) {
-  raw <- utils::packageDescription("mrcaseb")$Imports
+personalr_to_replace_packages <- function(include_self = TRUE) {
+  raw <- utils::packageDescription("personalr_to_replace")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
   names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
-    names <- c(names, "mrcaseb")
+    names <- c(names, "personalr_to_replace")
   }
 
   names

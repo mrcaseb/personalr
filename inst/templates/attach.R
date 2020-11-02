@@ -1,29 +1,3 @@
-# imports <- mrcaseb_packages()
-#
-# core <- imports[!imports %in% c("cli", "crayon", "rstudioapi", "mrcaseb")]
-
-core <- c(
-  "dplyr",
-  "furrr",
-  "ggimage",
-  "glue",
-  "ggplot2",
-  "ggrepel",
-  "gt",
-  "janitor",
-  "lubridate",
-  "magrittr",
-  "nflfastR",
-  "purrr",
-  "readr",
-  "scales",
-  "stringr",
-  "tibble",
-  "tidyr",
-  "tidyselect",
-  "usethis"
-)
-
 core_unloaded <- function() {
   search <- paste0("package:", core)
   core[!search %in% search()]
@@ -39,7 +13,7 @@ same_library <- function(pkg) {
   )
 }
 
-mrcaseb_attach <- function() {
+personalr_to_replace_attach <- function() {
   to_load <- core_unloaded()
   if (length(to_load) == 0)
     return(invisible())
@@ -47,7 +21,7 @@ mrcaseb_attach <- function() {
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
-      right = crayon::cyan(crayon::bold(paste0("mrcaseb ", package_version("mrcaseb"))))
+      right = crayon::cyan(crayon::bold(paste0("personalr_to_replace ", package_version("personalr_to_replace"))))
     ),
     startup = TRUE
   )
