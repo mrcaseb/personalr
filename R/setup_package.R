@@ -12,9 +12,14 @@
 #'   on the current system, otherwise an error will be shown.
 #' @export
 #' @examples
+#' \donttest{
 #' # create package "mypackage" in temporary directory with
 #' # the core packages dplyr, glue and purrr
-#' setup_package(path = tempdir(), packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
+#' withr::with_tempdir({
+#'   install.packages(c("dplyr", "glue", "purrr"), repos = "http://cran.us.r-project.org")
+#'   setup_package(path = tempdir(), packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
+#' })
+#' }
 setup_package <- function(path, packagename, core = NULL) {
   # check the core vector
   purrr::walk(core, check_for_package)
@@ -78,3 +83,5 @@ setup_package <- function(path, packagename, core = NULL) {
   # Now activate project
   usethis::proj_activate(path)
 }
+
+
