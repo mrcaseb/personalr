@@ -92,6 +92,14 @@ version_spec <- function(x) {
   numeric_version(x)
 }
 
+is_package <- function(base_path = proj_get()) {
+  res <- tryCatch(
+    rprojroot::find_package_root_file(path = base_path),
+    error = function(e) NULL
+  )
+  !is.null(res)
+}
+
 # Taken from https://github.com/radiant-rstats/radiant.data/blob/m --------
 
 is_string <- function(x) {
