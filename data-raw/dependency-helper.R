@@ -8,7 +8,8 @@ imports <- c(
   "devtools",
   "utils",
   "desc",
-  "rprojroot"
+  "rprojroot",
+  "magrittr"
 )
 purrr::walk(imports, usethis::use_package, "Imports")
 usethis::use_tidy_description()
