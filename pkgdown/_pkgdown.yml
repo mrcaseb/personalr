@@ -2,7 +2,7 @@
 
 template:
   params:
-    bootswatch: superhero
+    bootswatch: flatly
 
 toc:
   depth: 3
@@ -16,11 +16,12 @@ home:
 
 navbar:
   structure:
+    left: [home, intro, reference, news, articles]
     right: [twitter, github]
   components:
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: http://twitter.com/mrcaseb
-   reference:
+    reference:
       text: "Functions"
       href: reference/index.html
