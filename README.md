@@ -51,3 +51,10 @@ You can install the development version from
 
     if (!requireNamespace("remotes", quietly = TRUE)) {install.packages("remotes")}
     remotes::install_github("mrcaseb/personalr")
+
+## One more thing
+
+personalr is open source and it builds on top of other open source
+projects. However, maintaining this package will be a lot of work so I
+kindly ask you to consider donating at
+[patreon](https://patreon.com/mrcaseb).
