@@ -12,9 +12,9 @@
 #'   on the current system, otherwise an error will be shown.
 #' @export
 #' @examples
-#' if (FALSE) {
-#'   setup_package("..", "mypackage", core = c("dplyr", "glue", "purrr"))
-#' }
+#' # create package "mypackage" in temporary directory with
+#' # the core packages dplyr, glue and purrr
+#' setup_package(path = tempdir(), packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
 setup_package <- function(path, packagename, core = NULL) {
   # check the core vector
   purrr::walk(core, check_for_package)
