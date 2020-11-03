@@ -16,7 +16,6 @@ home:
 
 navbar:
   structure:
-    left:  [home, intro, reference, news, articles, tutorials, osf]
     right: [twitter, github]
   components:
     twitter:
