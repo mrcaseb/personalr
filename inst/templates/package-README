@@ -20,51 +20,20 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of {{{ Package }}} is to ...
+The goal of {{{ Package }}} is to attach a list of chosen 'core' packages when {{{ Package }}} is loaded. It can also be used to export some additional helper functions to make them available on other machines or scripts.
 
-## Installation
+More information about how to update the core list or add own functions can be found on the [personalr home page](https://mrcaseb.github.io/personalr/articles/personalr.html).
 
-You can install the released version of {{{ Package }}} from [CRAN](https://CRAN.R-project.org) with:
+## Usage
 
-``` r
-install.packages("{{{ Package }}}")
-```
-
-{{#on_github}}
-And the development version from [GitHub](https://github.com/) with:
+{{{ Package }}} is already installed on your machine and can be called with
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("{{{ github_spec }}}")
+library({{{ Package }}})
 ```
-{{/on_github}}
-## Example
+If you make changes and want to reinstall it, please open the corresponding project and run
 
-This is a basic example which shows you how to solve a common problem:
-
-{{#Rmd}}
-```{r example}
-{{/Rmd}}
-{{^Rmd}}``` r
-{{/Rmd}}
-library({{Package}})
-## basic example code
+``` r
+devtools::document()
+devtools::install()
 ```
-
-{{#Rmd}}
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
-{{/Rmd}}
