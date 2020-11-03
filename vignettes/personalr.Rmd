@@ -1,0 +1,55 @@
+---
+title: "Introduction to personalr"
+author: "Sebastian Carl"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Acknowledgement
+
+Setting up an R package isn't really intuitive as the developer needs a basic understanding of some package conventions and good practice methods. There are multiple packages in the R landscape that help doing exactly this. `personalr` makes heavy usage of the most important package development helper package: [`usethis`](https://usethis.r-lib.org/). It has a ton of useful functions but the developer has to know which of them is needed for the individual purpose. 
+
+`personalr` is more or less a wrapper around several usethis functions and completes the whole thing with some helper functions. The package setup that personalr creates is also based on the [`tidyverse`](https://tidyverse.tidyverse.org/) package.
+
+Everything you need to know about R package development is perfectly summarized in [Hadley Wickham's book R Packages](https://r-pkgs.org/).
+
+# Usage
+
+## First setup
+
+The main function of `personalr` is `setup_package()`. Handed a valid path, the desired package name and a vector or list of package names (the 'core' of the personal package that is about to be created) it does the following things:
+
+- create the project with the intended package name
+- create all basic package files like DESCRIPTION (including the Imports of the 'core' packages), NAMESPACE or the "R" directory
+- create a basic Readme
+- create all scripts and functions in the R directory that are required to attach the core packages
+- add the pipe operator `magrittr::%>%()` to your exported functions so it is usable as soon as the package is loaded
+- document and install the package
+- open the new package in a separate R session.
+
+The following example creates the new package `"mypackage"` with the `core` packages dplyr, glue and purrr in a temporary directory.
+
+```{r setup, eval=TRUE}
+library(personalr)
+temp_directory <- tempdir()
+setup_package(path = temp_directory, packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
+```
+
+Once the setup is finished and the new package installed, the new package should be opened in a separate R session. It will show the following files and directories
+
+```{r, echo=FALSE}
+library(fs)
+fs::dir_tree(fs::path(temp_directory, "mypackage"))
+```
+
+## Update your package
+
+There are basically two reasons why you want to update your personal package:
+
+1. You want to update the list of `core` packages
+1. You want to add a helper function so you can call it when the package is loaded (i.e. 'export' a function)
