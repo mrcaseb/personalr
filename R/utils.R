@@ -92,7 +92,7 @@ version_spec <- function(x) {
   numeric_version(x)
 }
 
-is_package <- function(base_path = proj_get()) {
+is_package <- function(base_path = usethis::proj_get()) {
   res <- tryCatch(
     rprojroot::find_package_root_file(path = base_path),
     error = function(e) NULL

@@ -9,7 +9,9 @@ imports <- c(
   "utils",
   "desc",
   "rprojroot",
-  "magrittr"
+  "magrittr",
+  "fs",
+  "withr"
 )
 purrr::walk(imports, usethis::use_package, "Imports")
 usethis::use_tidy_description()
