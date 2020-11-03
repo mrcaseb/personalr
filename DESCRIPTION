@@ -1,6 +1,6 @@
 Package: personalr
 Title: Automated Personal Package Setup
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person(given = "Sebastian",
            family = "Carl",
@@ -15,7 +15,9 @@ Imports:
     desc,
     devtools,
     glue,
+    magrittr,
     purrr,
+    rprojroot,
     rstudioapi,
     usethis,
     utils,
