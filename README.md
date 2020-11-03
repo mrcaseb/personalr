@@ -16,8 +16,9 @@ will come to the point where you want to use already written code when
 developing a script and often need the same packages to do your work.The
 easiest solution is to save the loading of the regularly used packages
 and maybe some helper functions in a separate script and then load this
-script with `source(...)` into the Global Environment. However, this
-approach has two disadvantages:
+script with `source(...)` into the Global Environment.
+
+However, this approach has two disadvantages:
 
 1.  Over time, the Global Environment becomes littered, making it harder
     to find important objects and
@@ -26,20 +27,23 @@ approach has two disadvantages:
 
 ## Package Purpose
 
-The goal of personalr is to …
+The best solution for the above mentioned disadvantages is an own
+(personal) package, but for the setup it needs a basic understanding of
+how to develop packages.
+
+The goal of personalr is to do exactly that. A basic setup of a personal
+package, which loads a modifiable list of packages and some basic
+functions.
 
 ## Installation
 
-You can install the released version of personalr from
-[CRAN](https://CRAN.R-project.org) with:
+<!-- You can install the released version of personalr from [CRAN](https://CRAN.R-project.org) with: -->
+<!-- ``` r -->
+<!-- install.packages("personalr") -->
+<!-- ``` -->
 
-``` r
-install.packages("personalr")
-```
+You can install the development version from
+[GitHub](https://github.com/) with:
 
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("mrcaseb/personalr")
-```
+    if (!requireNamespace("remotes", quietly = TRUE)) {install.packages("remotes")}
+    remotes::install_github("mrcaseb/personalr")
