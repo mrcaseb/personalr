@@ -10,3 +10,4 @@
 ^pkgdown$
 ^\.github$
 ^vignettes$
+^\.travis\.yml$

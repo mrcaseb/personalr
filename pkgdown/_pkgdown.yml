@@ -1,4 +1,4 @@
-# url: https://www.nflfastr.com/
+url: https://mrcaseb.github.io/personalr/
 
 template:
   params:
@@ -17,7 +17,7 @@ home:
 navbar:
   structure:
     left: [home, intro, reference, news, articles]
-    right: [twitter, github]
+    right: [sponsor, twitter, github]
   components:
     twitter:
       icon: "fab fa-twitter fa-lg"
@@ -25,3 +25,6 @@ navbar:
     reference:
       text: "Functions"
       href: reference/index.html
+    sponsor:
+      icon: "fas fa-heart fa-lg"
+      href: https://patreon.com/mrcaseb
