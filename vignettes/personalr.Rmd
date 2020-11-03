@@ -34,7 +34,13 @@ The main function of `personalr` is `setup_package()`. Handed a valid path, the 
 
 The following example creates the new package `"mypackage"` with the `core` packages dplyr, glue and purrr in a temporary directory.
 
-```{r setup, eval=TRUE}
+```{r, eval=FALSE}
+library(personalr)
+temp_directory <- tempdir()
+setup_package(path = temp_directory, packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
+```
+
+```{r setup, eval=TRUE, echo=FALSE}
 library(personalr)
 temp_directory <- tempdir()
 setup_package(path = temp_directory, packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
@@ -53,3 +59,52 @@ There are basically two reasons why you want to update your personal package:
 
 1. You want to update the list of `core` packages
 1. You want to add a helper function so you can call it when the package is loaded (i.e. 'export' a function)
+
+### Update your 'core' packages
+
+There is a separate function in `personalr` to update your list of `core` packages: `update_core()`. It can either append new packages to the existing `core` or overwrite it completely (with the logical argument `append`). 
+
+Assuming you have run the above code and have created the personal package `"mypackage"` with the `core` packages "dplyr", "glue" and "purrr" you can add another package, e.g. "tibble" by running the following code (please note that the example uses temporary directories and if you run this on your machine it's easier to open the project and set `path = "."`).
+
+```{r, eval=FALSE}
+update_core(path = temp_directory, packagename = "mypackage", core = "tibble", append = TRUE)
+```
+
+```{r, eval=TRUE, echo=FALSE}
+update_core(path = temp_directory, packagename = "mypackage", core = "tibble", append = TRUE)
+```
+
+Now `"mypackage"` attaches "dplyr", "glue", "purrr" and "tibble" when it is loaded. If you want to overwrite the core (i.e. only use "tibble" and drop the other packages) just set `append = FALSE` in the above code chunk.
+
+### Add your own exported helper function
+
+One of the strengths of a package is that you are able to save your helper functions inside the package and make them available in your code without littering the Global Environment. 
+
+Let's say you often use the negated version of `%in%` to select values that are *not* in a vector. The typical way to do it is `!value %in% vector`. This is somewhat annoying as it's hard to read the code and see the exclamation mark at the beginning of the expression. So now we want to write and export our own little helper for the negated version of `%in%`, and we call it `%nin%`.
+
+If you run this inside your project
+
+```{r, eval=FALSE}
+usethis::use_r("nin")
+```
+
+it will create a new script `"R/nin.R"` and open it directly. Add the code of your helper function and don't forget to export it with `#' @export` (this means the next time you document and install your package the new function will be exported and available for usage).
+
+```{r, eval=FALSE}
+#' @export
+'%nin%' <- purrr::negate(`%in%`)
+```
+
+To update your package you should consider changing the package version to make more clear something changed by running
+
+```{r, eval=FALSE}
+usethis::use_version()
+```
+
+and afterwards documenting and installing the new version by running
+
+```{r, eval=FALSE}
+devtools::document()
+devtools::install()
+```
+
