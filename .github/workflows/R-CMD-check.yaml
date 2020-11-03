@@ -67,7 +67,7 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("rcmdcheck")
-          istall.packages(c("dplyr", "glue", "purrr"))
+          install.packages(c("dplyr", "glue", "purrr"))
         shell: Rscript {0}
 
       - name: Check
