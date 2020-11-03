@@ -14,6 +14,7 @@ BugReports: https://github.com/mrcaseb/personalr/issues
 Imports: 
     desc,
     devtools,
+    fs,
     glue,
     magrittr,
     purrr,
@@ -21,6 +22,7 @@ Imports:
     rstudioapi,
     usethis,
     utils,
+    withr,
     xfun
 Encoding: UTF-8
 LazyData: true
