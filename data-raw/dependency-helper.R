@@ -7,7 +7,8 @@ imports <- c(
   "xfun",
   "devtools",
   "utils",
-  "desc"
+  "desc",
+  "rprojroot"
 )
 purrr::walk(imports, usethis::use_package, "Imports")
 usethis::use_tidy_description()

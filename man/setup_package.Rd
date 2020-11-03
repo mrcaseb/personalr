@@ -22,7 +22,7 @@ on the current system, otherwise an error will be shown.}
 A function to setup a new personal package or update an existing package.
 }
 \examples{
-if (FALSE) {
-  setup_package("..", "mypackage", core = c("dplyr", "glue", "purrr"))
-}
+# create package "mypackage" in temporary directory with
+# the core packages dplyr, glue and purrr
+setup_package(path = tempdir(), packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
 }
