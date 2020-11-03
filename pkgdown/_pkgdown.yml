@@ -1,0 +1,27 @@
+# url: https://www.nflfastr.com/
+
+template:
+  params:
+    bootswatch: superhero
+
+toc:
+  depth: 3
+
+authors:
+  Sebastian Carl:
+    href: https://twitter.com/mrcaseb
+
+home:
+  title: An R package for automated personal package setup
+
+navbar:
+  structure:
+    left:  [home, intro, reference, news, articles, tutorials, osf]
+    right: [twitter, github]
+  components:
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: http://twitter.com/mrcaseb
+   reference:
+      text: "Functions"
+      href: reference/index.html
