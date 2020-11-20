@@ -15,13 +15,17 @@ update_core <- function(path, packagename, core = NULL, append = TRUE) {
   purrr::walk(core, check_for_package)
 
   # create the package and use the path for next steps
-  if (!is_package(path)) path <- fs::path_expand(glue::glue("{path}/{packagename}"))
+  if (!is_package(path)) {
+    path <- fs::path_expand(glue::glue("{path}/{packagename}"))
+  }
 
   # move to the correct working directory
   usethis::local_project(path)
 
   # Remove deps if append = FALSE
-  if (!isTRUE(append)) {desc::desc_del_deps()}
+  if (!isTRUE(append)) {
+    desc::desc_del_deps()
+  }
 
   # write new deps and tidy up DESCRIPTION
   purrr::walk(c(core, "cli", "crayon", "rstudioapi"), use_dependency, "Imports")
@@ -43,7 +47,12 @@ update_core <- function(path, packagename, core = NULL, append = TRUE) {
   ) %>%
     sort()
 
-  usethis::ui_info("If you really want to update your core you'll have to confirm the follwing dialogue...!\n")
+  output_string <- glue::glue(
+    "If you really want to update your core you'll have to",
+    "confirm the following dialogue...!"
+  )
+
+  usethis::ui_info("{output_string}\n")
 
   # write new core file
   usethis::write_over(
