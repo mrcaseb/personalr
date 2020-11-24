@@ -131,8 +131,8 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mrcaseb/personalr">personalr</a></span><span class="op">)</span>
 <span class="va">temp_directory</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu"><a href="../reference/setup_package.html">setup_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"glue"</span>, <span class="st">"purrr"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; ✔ Creating '/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage/'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
+<pre><code>#&gt; ✔ Creating '/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage/'
+#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage'
 #&gt; ✔ Creating 'R/'
 #&gt; ✔ Writing 'DESCRIPTION'
 #&gt; Package: mypackage
@@ -149,7 +149,7 @@
 #&gt; RoxygenNote: 7.1.1
 #&gt; ✔ Writing 'NAMESPACE'
 #&gt; ✔ Setting active project to '&lt;no active project&gt;'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
+#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage'
 #&gt; ✔ Writing 'R/mypackage-package.R'
 #&gt; ✔ Writing 'README.md'
 #&gt; ✔ Adding 'dplyr' to Imports field in DESCRIPTION
@@ -172,7 +172,7 @@
 #&gt; ──────────────────────────────────────────────────────────────── Ready to go! ──
 #&gt; 
 #&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage \
+#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage \
 #&gt;   --install-tests 
 #&gt; * installing to library ‘/Users/runner/work/_temp/Library’
 #&gt; * installing *source* package ‘mypackage’ ...
@@ -186,10 +186,10 @@
 #&gt; ** testing if installed package can be loaded from final location
 #&gt; ** testing if installed package keeps a record of temporary installation path
 #&gt; * DONE (mypackage)
-#&gt; ✔ Changing working directory to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage/'
+#&gt; ✔ Changing working directory to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage/'
 #&gt; ✔ Setting active project to '&lt;no active project&gt;'</code></pre>
 <p>Once the setup is finished and the new package installed, the new package should be opened in a separate R session. It will show the following files and directories</p>
-<pre><code>#&gt; /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage
+<pre><code>#&gt; /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage
 #&gt; ├── DESCRIPTION
 #&gt; ├── NAMESPACE
 #&gt; ├── R
@@ -220,7 +220,7 @@
 <p>Assuming you have run the above code and have created the personal package <code>"mypackage"</code> with the <code>core</code> packages “dplyr”, “glue” and “purrr” you can add another package, e.g. “tibble” by running the following code (please note that the example uses temporary directories and if you run this on your machine it’s easier to open the project and set <code>path = "."</code>).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/update_core.html">update_core</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="st">"tibble"</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
+<pre><code>#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage'
 #&gt; ✔ Adding 'tibble' to Imports field in DESCRIPTION
 #&gt; ℹ If you really want to update your core you'll have toconfirm the following dialogue...!
 #&gt; ✔ Leaving 'R/core.R' unchanged
@@ -229,7 +229,7 @@
 #&gt; Loading mypackage
 #&gt; 
 #&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage \
+#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpTSVdun/mypackage \
 #&gt;   --install-tests 
 #&gt; * installing to library ‘/Users/runner/work/_temp/Library’
 #&gt; * installing *source* package ‘mypackage’ ...
