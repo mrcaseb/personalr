@@ -5,5 +5,6 @@
 # roxygen namespace tags. Modify with care!
 ## usethis namespace: start
 #' @importFrom magrittr %>%
+#' @importFrom withr with_tempdir
 ## usethis namespace: end
 NULL

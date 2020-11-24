@@ -15,13 +15,17 @@ same_library <- function(pkg) {
 
 personalr_to_replace_attach <- function() {
   to_load <- core_unloaded()
-  if (length(to_load) == 0)
+  if (length(to_load) == 0) {
     return(invisible())
+  }
 
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
-      right = crayon::cyan(crayon::bold(paste0("personalr_to_replace ", package_version("personalr_to_replace"))))
+      right = crayon::cyan(crayon::bold(paste0(
+        "personalr_to_replace ",
+        package_version("personalr_to_replace")
+      )))
     ),
     startup = TRUE
   )
@@ -51,7 +55,8 @@ package_version <- function(x) {
   version <- as.character(unclass(utils::packageVersion(x))[[1]])
 
   if (length(version) > 3) {
-    version[4:length(version)] <- crayon::yellow(as.character(version[4:length(version)]))
+    version[4:length(version)] <-
+      crayon::yellow(as.character(version[4:length(version)]))
   }
   paste0(version, collapse = ".")
 }

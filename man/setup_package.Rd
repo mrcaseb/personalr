@@ -26,8 +26,15 @@ A function to setup a new personal package or update an existing package.
 # create package "mypackage" in temporary directory with
 # the core packages dplyr, glue and purrr
 withr::with_tempdir({
-  install.packages(c("dplyr", "glue", "purrr"), repos = "http://cran.us.r-project.org")
-  setup_package(path = tempdir(), packagename = "mypackage", core = c("dplyr", "glue", "purrr"))
+  install.packages(
+    c("dplyr", "glue", "purrr"),
+    repos = "http://cran.us.r-project.org"
+  )
+  setup_package(
+    path = tempdir(),
+    packagename = "mypackage",
+    core = c("dplyr", "glue", "purrr")
+  )
 })
 }
 }

@@ -57,4 +57,4 @@ You can install the development version from
 personalr is open source and it builds on top of other open source
 projects. However, maintaining this package will be a lot of work so I
 kindly ask you to consider donating at
-[patreon](https://patreon.com/mrcaseb).
+[patreon](https://www.patreon.com/mrcaseb).

@@ -5,7 +5,8 @@ personalr_to_replace_conflicts <- function() {
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  personalr_to_replace_names <- paste0("package:", personalr_to_replace_packages())
+  personalr_to_replace_names <-
+    paste0("package:", personalr_to_replace_packages())
   conflicts <- purrr::keep(conflicts, ~ any(.x %in% personalr_to_replace_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
@@ -15,7 +16,9 @@ personalr_to_replace_conflicts <- function() {
 }
 
 personalr_to_replace_conflict_message <- function(x) {
-  if (length(x) == 0) return("")
+  if (length(x) == 0) {
+    return("")
+  }
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
@@ -30,7 +33,11 @@ personalr_to_replace_conflict_message <- function(x) {
   )
 
   winner <- pkgs %>% purrr::map_chr(1)
-  funs <- format(paste0(crayon::blue(winner), "::", crayon::green(paste0(names(x), "()"))))
+  funs <- format(paste0(
+    crayon::blue(winner),
+    "::",
+    crayon::green(paste0(names(x), "()"))
+  ))
   bullets <- paste0(
     crayon::red(cli::symbol$cross), " ", funs,
     " masks ", other_calls,
@@ -52,14 +59,16 @@ confirm_conflict <- function(packages, name) {
     purrr::map(~ get(name, pos = .)) %>%
     purrr::keep(is.function)
 
-  if (length(objs) <= 1)
+  if (length(objs) <= 1) {
     return()
+  }
 
   # Remove identical functions
   objs <- objs[!duplicated(objs)]
   packages <- packages[!duplicated(packages)]
-  if (length(objs) == 1)
+  if (length(objs) == 1) {
     return()
+  }
 
   packages
 }
