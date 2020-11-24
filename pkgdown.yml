@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   personalr: personalr.html
-last_built: 2020-11-03T17:04Z
+last_built: 2020-11-24T09:49Z
 urls:
   reference: https://mrcaseb.github.io/personalr//reference
   article: https://mrcaseb.github.io/personalr//articles

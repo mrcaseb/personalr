@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">personalr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.1</span>
       </span>
     </div>
 
@@ -127,12 +127,12 @@
 <li>open the new package in a separate R session.</li>
 </ul>
 <p>The following example creates the new package <code>"mypackage"</code> with the <code>core</code> packages dplyr, glue and purrr in a temporary directory.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mrcaseb/personalr">personalr</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mrcaseb/personalr">personalr</a></span><span class="op">)</span>
 <span class="va">temp_directory</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="../reference/setup_package.html">setup_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"glue"</span>, <span class="st">"purrr"</span><span class="op">)</span><span class="op">)</span></pre></div>
-<pre><code>#&gt; ✔ Creating '/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage/'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage'
+<span class="fu"><a href="../reference/setup_package.html">setup_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"glue"</span>, <span class="st">"purrr"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code>#&gt; ✔ Creating '/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage/'
+#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
 #&gt; ✔ Creating 'R/'
 #&gt; ✔ Writing 'DESCRIPTION'
 #&gt; Package: mypackage
@@ -149,7 +149,7 @@
 #&gt; RoxygenNote: 7.1.1
 #&gt; ✔ Writing 'NAMESPACE'
 #&gt; ✔ Setting active project to '&lt;no active project&gt;'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage'
+#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
 #&gt; ✔ Writing 'R/mypackage-package.R'
 #&gt; ✔ Writing 'README.md'
 #&gt; ✔ Adding 'dplyr' to Imports field in DESCRIPTION
@@ -172,7 +172,7 @@
 #&gt; ──────────────────────────────────────────────────────────────── Ready to go! ──
 #&gt; 
 #&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage \
+#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage \
 #&gt;   --install-tests 
 #&gt; * installing to library ‘/Users/runner/work/_temp/Library’
 #&gt; * installing *source* package ‘mypackage’ ...
@@ -186,10 +186,10 @@
 #&gt; ** testing if installed package can be loaded from final location
 #&gt; ** testing if installed package keeps a record of temporary installation path
 #&gt; * DONE (mypackage)
-#&gt; ✔ Changing working directory to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage/'
+#&gt; ✔ Changing working directory to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage/'
 #&gt; ✔ Setting active project to '&lt;no active project&gt;'</code></pre>
 <p>Once the setup is finished and the new package installed, the new package should be opened in a separate R session. It will show the following files and directories</p>
-<pre><code>#&gt; /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage
+<pre><code>#&gt; /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage
 #&gt; ├── DESCRIPTION
 #&gt; ├── NAMESPACE
 #&gt; ├── R
@@ -218,18 +218,18 @@
 <a href="#update-your-core-packages" class="anchor"></a>Update your ‘core’ packages</h3>
 <p>There is a separate function in <code>personalr</code> to update your list of <code>core</code> packages: <code><a href="../reference/update_core.html">update_core()</a></code>. It can either append new packages to the existing <code>core</code> or overwrite it completely (with the logical argument <code>append</code>).</p>
 <p>Assuming you have run the above code and have created the personal package <code>"mypackage"</code> with the <code>core</code> packages “dplyr”, “glue” and “purrr” you can add another package, e.g. “tibble” by running the following code (please note that the example uses temporary directories and if you run this on your machine it’s easier to open the project and set <code>path = "."</code>).</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/update_core.html">update_core</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="st">"tibble"</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></pre></div>
-<pre><code>#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage'
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/update_core.html">update_core</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="st">"tibble"</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<pre><code>#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage'
 #&gt; ✔ Adding 'tibble' to Imports field in DESCRIPTION
-#&gt; ℹ If you really want to update your core you'll have to confirm the follwing dialogue...!
+#&gt; ℹ If you really want to update your core you'll have toconfirm the following dialogue...!
 #&gt; ✔ Leaving 'R/core.R' unchanged
 #&gt; ✔ Setting Version field in DESCRIPTION to '1.0.1'
 #&gt; ● Updating documentation and installing mypackage...
 #&gt; Loading mypackage
 #&gt; 
 #&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/Rtmpg9Bgnr/mypackage \
+#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpqjWA2q/mypackage \
 #&gt;   --install-tests 
 #&gt; * installing to library ‘/Users/runner/work/_temp/Library’
 #&gt; * installing *source* package ‘mypackage’ ...
@@ -252,19 +252,19 @@
 <p>One of the strengths of a package is that you are able to save your helper functions inside the package and make them available in your code without littering the Global Environment.</p>
 <p>Let’s say you often use the negated version of <code><a href="https://rdrr.io/r/base/match.html">%in%</a></code> to select values that are <em>not</em> in a vector. The typical way to do it is <code>!value %in% vector</code>. This is somewhat annoying as it’s hard to read the code and see the exclamation mark at the beginning of the expression. So now we want to write and export our own little helper for the negated version of <code><a href="https://rdrr.io/r/base/match.html">%in%</a></code>, and we call it <code>%nin%</code>.</p>
 <p>If you run this inside your project</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_r.html">use_r</a></span><span class="op">(</span><span class="st">"nin"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_r.html">use_r</a></span><span class="op">(</span><span class="st">"nin"</span><span class="op">)</span></code></pre></div>
 <p>it will create a new script <code>"R/nin.R"</code> and open it directly. Add the code of your helper function and don’t forget to export it with <code>#' @export</code> (this means the next time you document and install your package the new function will be exported and available for usage).</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="co">#' @export</span>
-<span class="st">'%nin%'</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/negate.html">negate</a></span><span class="op">(</span><span class="va">`%in%`</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' @export</span>
+<span class="st">'%nin%'</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/negate.html">negate</a></span><span class="op">(</span><span class="va">`%in%`</span><span class="op">)</span></code></pre></div>
 <p>To update your package you should consider changing the package version to make more clear something changed by running</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_version.html">use_version</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_version.html">use_version</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>and afterwards documenting and installing the new version by running</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/document.html">document</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/install.html">install</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/document.html">document</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/install.html">install</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 </div>
