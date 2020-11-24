@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version-ago/personalr)](https://CRAN.R-project.org/package=personalr)
+[![CRAN
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/personalr)](https://CRAN.R-project.org/package=personalr)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![R build
@@ -41,10 +45,10 @@ functions.
 
 ## Installation
 
-<!-- You can install the released version of personalr from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("personalr") -->
-<!-- ``` -->
+You can install the released version of personalr from
+[CRAN](https://CRAN.R-project.org) with:
+
+    install.packages("personalr")
 
 You can install the development version from
 [GitHub](https://github.com/) with:
