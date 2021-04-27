@@ -1,6 +1,6 @@
 Package: personalr
 Title: Automated Personal Package Setup
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: 
     person(given = "Sebastian",
            family = "Carl",
@@ -9,7 +9,7 @@ Authors@R:
 Description: Functions to setup a personal R package that
     attaches given libraries and exports personal helper functions.
 License: MIT + file LICENSE
-URL: https://github.com/mrcaseb/personalr
+URL: https://mrcaseb.github.io/personalr/index.html, https://github.com/mrcaseb/personalr
 BugReports: https://github.com/mrcaseb/personalr/issues
 Imports: 
     desc,
