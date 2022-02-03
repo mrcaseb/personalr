@@ -92,7 +92,7 @@ it will create a new script `"R/nin.R"` and open it directly. Add the code of yo
 
 ```{r, eval=FALSE}
 #' @export
-'%nin%' <- purrr::negate(`%in%`)
+'%nin%' <- Negate(`%in%`)
 ```
 
 To update your package you should consider changing the package version to make more clear something changed by running
