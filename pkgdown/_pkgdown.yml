@@ -1,18 +1,25 @@
 url: https://mrcaseb.github.io/personalr/
 
 template:
-  params:
-    bootswatch: flatly
-
-toc:
-  depth: 3
+  bootstrap: 5
+  bootswatch: flatly
+  bslib:
+    font_scale: 1.2
+    base_font: {google: "IBM Plex Sans"}
+    heading_font: {google: "Kanit"}
+    code_font: {google: "Fira Code"}
+  opengraph:
+    twitter:
+      creator: "@mrcaseb"
+      site: "@mrcaseb"
+      card: summary_large_image
 
 authors:
   Sebastian Carl:
     href: https://twitter.com/mrcaseb
 
 home:
-  title: An R package for automated personal package setup
+  title: An R Package for Automated Personal Package Setup
 
 navbar:
   structure:
