@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="personalr">
 <title>Introduction to personalr • personalr</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,110 +13,109 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><link href="../deps/_IBM%20Plex%20Sans-0.4.0/font.css" rel="stylesheet">
+<link href="../deps/_Fira%20Code-0.4.0/font.css" rel="stylesheet">
+<link href="../deps/_Kanit-0.4.0/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to personalr">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="Introduction to personalr">
 <meta property="og:description" content="personalr">
 <meta property="og:image" content="https://mrcaseb.github.io/personalr/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@mrcaseb">
+<meta name="twitter:site" content="@mrcaseb">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">personalr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">personalr</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.2.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item">
+  <a class="nav-link" href="../articles/personalr.html">Get started</a>
 </li>
-<li>
-  <a href="../articles/personalr.html">Get started</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Functions</a>
 </li>
-<li>
-  <a href="../reference/index.html">Functions</a>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://patreon.com/mrcaseb">
-    <span class="fas fa-heart fa-lg"></span>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://patreon.com/mrcaseb">
+    <span class="fas fa fas fa-heart fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="http://twitter.com/mrcaseb">
-    <span class="fab fa-twitter fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="http://twitter.com/mrcaseb">
+    <span class="fab fa fab fa-twitter fa-lg"></span>
      
   </a>
 </li>
-<li>
-  <a href="https://github.com/mrcaseb/personalr/">
-    <span class="fab fa-github fa-lg"></span>
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/mrcaseb/personalr/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><script src="personalr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Introduction to personalr</h1>
-                        <h4 class="author">Sebastian Carl</h4>
+
+<script src="personalr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Introduction to personalr</h1>
+                        <h4 data-toc-skip class="author">Sebastian Carl</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/mrcaseb/personalr/blob/master/vignettes/personalr.Rmd"><code>vignettes/personalr.Rmd</code></a></small>
-      <div class="hidden name"><code>personalr.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/mrcaseb/personalr/blob/HEAD/vignettes/personalr.Rmd" class="external-link"><code>vignettes/personalr.Rmd</code></a></small>
+      <div class="d-none name"><code>personalr.Rmd</code></div>
     </div>
 
     
     
-<div id="acknowledgement" class="section level1">
-<h1 class="hasAnchor">
-<a href="#acknowledgement" class="anchor"></a>Acknowledgement</h1>
-<p>Setting up an R package isn’t really intuitive as the developer needs a basic understanding of some package conventions and good practice methods. There are multiple packages in the R landscape that help doing exactly this. <code>personalr</code> makes heavy usage of the most important package development helper package: <a href="https://usethis.r-lib.org/"><code>usethis</code></a>. It has a ton of useful functions but the developer has to know which of them is needed for the individual purpose.</p>
-<p><code>personalr</code> is more or less a wrapper around several usethis functions and completes the whole thing with some helper functions. The package setup that personalr creates is also based on the <a href="https://tidyverse.tidyverse.org/"><code>tidyverse</code></a> package.</p>
-<p>Everything you need to know about R package development is perfectly summarized in <a href="https://r-pkgs.org/">Hadley Wickham’s book R Packages</a>.</p>
+<div class="section level2">
+<h2 id="acknowledgement">Acknowledgement<a class="anchor" aria-label="anchor" href="#acknowledgement"></a>
+</h2>
+<p>Setting up an R package isn’t really intuitive as the developer needs a basic understanding of some package conventions and good practice methods. There are multiple packages in the R landscape that help doing exactly this. <code>personalr</code> makes heavy usage of the most important package development helper package: <a href="https://usethis.r-lib.org/" class="external-link"><code>usethis</code></a>. It has a ton of useful functions but the developer has to know which of them is needed for the individual purpose.</p>
+<p><code>personalr</code> is more or less a wrapper around several usethis functions and completes the whole thing with some helper functions. The package setup that personalr creates is also based on the <a href="https://tidyverse.tidyverse.org/" class="external-link"><code>tidyverse</code></a> package.</p>
+<p>Everything you need to know about R package development is perfectly summarized in <a href="https://r-pkgs.org/" class="external-link">Hadley Wickham’s book R Packages</a>.</p>
 </div>
-<div id="usage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h1>
-<div id="first-setup" class="section level2">
-<h2 class="hasAnchor">
-<a href="#first-setup" class="anchor"></a>First setup</h2>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
+<div class="section level3">
+<h3 id="first-setup">First setup<a class="anchor" aria-label="anchor" href="#first-setup"></a>
+</h3>
 <p>The main function of <code>personalr</code> is <code><a href="../reference/setup_package.html">setup_package()</a></code>. Handed a valid path, the desired package name and a vector or list of package names (the ‘core’ of the personal package that is about to be created) it does the following things:</p>
 <ul>
 <li>create the project with the intended package name</li>
@@ -128,170 +128,166 @@
 </ul>
 <p>The following example creates the new package <code>"mypackage"</code> with the <code>core</code> packages dplyr, glue and purrr in a temporary directory.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mrcaseb.github.io/personalr/index.html">personalr</a></span><span class="op">)</span>
-<span class="va">temp_directory</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="../reference/setup_package.html">setup_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"glue"</span>, <span class="st">"purrr"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; ✔ Creating '/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage/'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage'
-#&gt; ✔ Creating 'R/'
-#&gt; ✔ Writing 'DESCRIPTION'
-#&gt; Package: mypackage
-#&gt; Title: What the Package Does (One Line, Title Case)
-#&gt; Version: 1.0.0
-#&gt; Authors@R (parsed):
-#&gt;     * First Last &lt;first.last@example.com&gt; [aut, cre] (YOUR-ORCID-ID)
-#&gt; Description: What the package does (one paragraph).
-#&gt; License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-#&gt;     license
-#&gt; Encoding: UTF-8
-#&gt; LazyData: true
-#&gt; Roxygen: list(markdown = TRUE)
-#&gt; RoxygenNote: 7.1.1
-#&gt; ✔ Writing 'NAMESPACE'
-#&gt; ✔ Setting active project to '&lt;no active project&gt;'
-#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage'
-#&gt; ✔ Writing 'R/mypackage-package.R'
-#&gt; ✔ Writing 'README.md'
-#&gt; ✔ Adding 'dplyr' to Imports field in DESCRIPTION
-#&gt; ✔ Adding 'glue' to Imports field in DESCRIPTION
-#&gt; ✔ Adding 'purrr' to Imports field in DESCRIPTION
-#&gt; ✔ Adding 'cli' to Imports field in DESCRIPTION
-#&gt; ✔ Adding 'crayon' to Imports field in DESCRIPTION
-#&gt; ✔ Adding 'rstudioapi' to Imports field in DESCRIPTION
-#&gt; ✔ Writing 'R/core.R'
-#&gt; ✔ Writing 'R/attach.R'
-#&gt; ✔ Writing 'R/conflicts.R'
-#&gt; ✔ Writing 'R/pipe.R'
-#&gt; ✔ Writing 'R/utils.R'
-#&gt; ✔ Writing 'R/zzz.R'
-#&gt; • Updating documentation and installing mypackage...
-#&gt; ℹ Loading mypackage
-#&gt; ── Attaching packages ─────────────────────────────────────── mypackage 1.0.0 ──
-#&gt; ✔ dplyr 1.0.7     ✔ purrr 0.3.4
-#&gt; ✔ glue  1.4.2
-#&gt; ──────────────────────────────────────────────────────────────── Ready to go! ──
-#&gt; 
-#&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage \
-#&gt;   --install-tests 
-#&gt; * installing to library ‘/Users/runner/work/_temp/Library’
-#&gt; * installing *source* package ‘mypackage’ ...
-#&gt; ** using staged installation
-#&gt; ** R
-#&gt; ** byte-compile and prepare package for lazy loading
-#&gt; ** help
-#&gt; *** installing help indices
-#&gt; ** building package indices
-#&gt; ** testing if installed package can be loaded from temporary location
-#&gt; ** testing if installed package can be loaded from final location
-#&gt; ** testing if installed package keeps a record of temporary installation path
-#&gt; * DONE (mypackage)
-#&gt; ✔ Setting active project to '&lt;no active project&gt;'</code></pre>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mrcaseb.github.io/personalr/index.html">personalr</a></span><span class="op">)</span>
+<span class="va">temp_directory</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu"><a href="../reference/setup_package.html">setup_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dplyr"</span>, <span class="st">"glue"</span>, <span class="st">"purrr"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">#&gt; ✔ Creating '/tmp/RtmpyOSzHG/mypackage/'</span>
+<span class="co">#&gt; ✔ Setting active project to '/tmp/RtmpyOSzHG/mypackage'</span>
+<span class="co">#&gt; ✔ Creating 'R/'</span>
+<span class="co">#&gt; ✔ Writing 'DESCRIPTION'</span>
+<span class="co">#&gt; Package: mypackage</span>
+<span class="co">#&gt; Title: What the Package Does (One Line, Title Case)</span>
+<span class="co">#&gt; Version: 1.0.0</span>
+<span class="co">#&gt; Authors@R (parsed):</span>
+<span class="co">#&gt;     * First Last &lt;first.last@example.com&gt; [aut, cre] (YOUR-ORCID-ID)</span>
+<span class="co">#&gt; Description: What the package does (one paragraph).</span>
+<span class="co">#&gt; License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a</span>
+<span class="co">#&gt;     license</span>
+<span class="co">#&gt; Encoding: UTF-8</span>
+<span class="co">#&gt; Roxygen: list(markdown = TRUE)</span>
+<span class="co">#&gt; RoxygenNote: 7.1.2</span>
+<span class="co">#&gt; ✔ Writing 'NAMESPACE'</span>
+<span class="co">#&gt; ✔ Setting active project to '&lt;no active project&gt;'</span>
+<span class="co">#&gt; ✔ Setting active project to '/tmp/RtmpyOSzHG/mypackage'</span>
+<span class="co">#&gt; ✔ Writing 'R/mypackage-package.R'</span>
+<span class="co">#&gt; ✔ Writing 'README.md'</span>
+<span class="co">#&gt; ✔ Adding 'dplyr' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Adding 'glue' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Adding 'purrr' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Adding 'cli' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Adding 'crayon' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Adding 'rstudioapi' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ✔ Writing 'R/core.R'</span>
+<span class="co">#&gt; ✔ Writing 'R/attach.R'</span>
+<span class="co">#&gt; ✔ Writing 'R/conflicts.R'</span>
+<span class="co">#&gt; ✔ Writing 'R/pipe.R'</span>
+<span class="co">#&gt; ✔ Writing 'R/utils.R'</span>
+<span class="co">#&gt; ✔ Writing 'R/zzz.R'</span>
+<span class="co">#&gt; • Updating documentation and installing mypackage...</span>
+<span class="co">#&gt; ℹ Loading mypackage</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ── Attaching packages ─────────────────────────────────────── mypackage 1.0.0 ──</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ✔ dplyr 1.0.7     ✔ purrr 0.3.4</span>
+<span class="co">#&gt; ✔ glue  1.6.1     </span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ──────────────────────────────────────────────────────────────── Ready to go! ──</span>
+<span class="co">#&gt; Running /opt/R/4.1.2/lib/R/bin/R CMD INSTALL /tmp/RtmpyOSzHG/mypackage \</span>
+<span class="co">#&gt;   --install-tests </span>
+<span class="co">#&gt; * installing to library ‘/home/runner/work/_temp/Library’</span>
+<span class="co">#&gt; * installing *source* package ‘mypackage’ ...</span>
+<span class="co">#&gt; ** using staged installation</span>
+<span class="co">#&gt; ** R</span>
+<span class="co">#&gt; ** byte-compile and prepare package for lazy loading</span>
+<span class="co">#&gt; ** help</span>
+<span class="co">#&gt; *** installing help indices</span>
+<span class="co">#&gt; ** building package indices</span>
+<span class="co">#&gt; ** testing if installed package can be loaded from temporary location</span>
+<span class="co">#&gt; ** testing if installed package can be loaded from final location</span>
+<span class="co">#&gt; ** testing if installed package keeps a record of temporary installation path</span>
+<span class="co">#&gt; * DONE (mypackage)</span>
+<span class="co">#&gt; ✔ Setting active project to '&lt;no active project&gt;'</span></code></pre>
 <p>Once the setup is finished and the new package installed, the new package should be opened in a separate R session. It will show the following files and directories</p>
-<pre><code>#&gt; /var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage
-#&gt; ├── DESCRIPTION
-#&gt; ├── NAMESPACE
-#&gt; ├── R
-#&gt; │   ├── attach.R
-#&gt; │   ├── conflicts.R
-#&gt; │   ├── core.R
-#&gt; │   ├── mypackage-package.R
-#&gt; │   ├── pipe.R
-#&gt; │   ├── utils.R
-#&gt; │   └── zzz.R
-#&gt; ├── README.md
-#&gt; └── man
-#&gt;     ├── mypackage-package.Rd
-#&gt;     └── pipe.Rd</code></pre>
+<pre><code><span class="co">#&gt; /tmp/RtmpyOSzHG/mypackage</span>
+<span class="co">#&gt; ├── DESCRIPTION</span>
+<span class="co">#&gt; ├── NAMESPACE</span>
+<span class="co">#&gt; ├── R</span>
+<span class="co">#&gt; │   ├── attach.R</span>
+<span class="co">#&gt; │   ├── conflicts.R</span>
+<span class="co">#&gt; │   ├── core.R</span>
+<span class="co">#&gt; │   ├── mypackage-package.R</span>
+<span class="co">#&gt; │   ├── pipe.R</span>
+<span class="co">#&gt; │   ├── utils.R</span>
+<span class="co">#&gt; │   └── zzz.R</span>
+<span class="co">#&gt; ├── README.md</span>
+<span class="co">#&gt; └── man</span>
+<span class="co">#&gt;     ├── mypackage-package.Rd</span>
+<span class="co">#&gt;     └── pipe.Rd</span></code></pre>
 </div>
-<div id="update-your-package" class="section level2">
-<h2 class="hasAnchor">
-<a href="#update-your-package" class="anchor"></a>Update your package</h2>
+<div class="section level3">
+<h3 id="update-your-package">Update your package<a class="anchor" aria-label="anchor" href="#update-your-package"></a>
+</h3>
 <p>There are basically two reasons why you want to update your personal package:</p>
 <ol style="list-style-type: decimal">
 <li>You want to update the list of <code>core</code> packages</li>
 <li>You want to add a helper function so you can call it when the package is loaded (i.e. ‘export’ a function)</li>
 </ol>
-<div id="update-your-core-packages" class="section level3">
-<h3 class="hasAnchor">
-<a href="#update-your-core-packages" class="anchor"></a>Update your ‘core’ packages</h3>
+<div class="section level4">
+<h4 id="update-your-core-packages">Update your ‘core’ packages<a class="anchor" aria-label="anchor" href="#update-your-core-packages"></a>
+</h4>
 <p>There is a separate function in <code>personalr</code> to update your list of <code>core</code> packages: <code><a href="../reference/update_core.html">update_core()</a></code>. It can either append new packages to the existing <code>core</code> or overwrite it completely (with the logical argument <code>append</code>).</p>
 <p>Assuming you have run the above code and have created the personal package <code>"mypackage"</code> with the <code>core</code> packages “dplyr”, “glue” and “purrr” you can add another package, e.g. “tibble” by running the following code (please note that the example uses temporary directories and if you run this on your machine it’s easier to open the project and set <code>path = "."</code>).</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/update_core.html">update_core</a></span><span class="op">(</span>path <span class="op">=</span> <span class="va">temp_directory</span>, packagename <span class="op">=</span> <span class="st">"mypackage"</span>, core <span class="op">=</span> <span class="st">"tibble"</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
-<pre><code>#&gt; ✔ Setting active project to '/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage'
-#&gt; ✔ Adding 'tibble' to Imports field in DESCRIPTION
-#&gt; ℹ If you really want to update your core you'll have toconfirm the following dialogue...!
-#&gt; ✔ Leaving 'R/core.R' unchanged
-#&gt; ✔ Setting Version field in DESCRIPTION to '1.0.1'
-#&gt; • Updating documentation and installing mypackage...
-#&gt; ℹ Loading mypackage
-#&gt; 
-#&gt; Running /Library/Frameworks/R.framework/Resources/bin/R CMD INSTALL \
-#&gt;   /private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmppkjTz2/mypackage \
-#&gt;   --install-tests 
-#&gt; * installing to library ‘/Users/runner/work/_temp/Library’
-#&gt; * installing *source* package ‘mypackage’ ...
-#&gt; ** using staged installation
-#&gt; ** R
-#&gt; ** byte-compile and prepare package for lazy loading
-#&gt; ** help
-#&gt; *** installing help indices
-#&gt; ** building package indices
-#&gt; ** testing if installed package can be loaded from temporary location
-#&gt; ** testing if installed package can be loaded from final location
-#&gt; ** testing if installed package keeps a record of temporary installation path
-#&gt; * DONE (mypackage)
-#&gt; ✔ Setting active project to '&lt;no active project&gt;'</code></pre>
+<pre><code><span class="co">#&gt; ✔ Setting active project to '/tmp/RtmpyOSzHG/mypackage'</span>
+<span class="co">#&gt; ✔ Adding 'tibble' to Imports field in DESCRIPTION</span>
+<span class="co">#&gt; ℹ If you really want to update your core you'll have toconfirm the following dialogue...!</span>
+<span class="co">#&gt; ✔ Leaving 'R/core.R' unchanged</span>
+<span class="co">#&gt; ✔ Setting Version field in DESCRIPTION to '1.0.1'</span>
+<span class="co">#&gt; • Updating documentation and installing mypackage...</span>
+<span class="co">#&gt; ℹ Loading mypackage</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Running /opt/R/4.1.2/lib/R/bin/R CMD INSTALL /tmp/RtmpyOSzHG/mypackage \</span>
+<span class="co">#&gt;   --install-tests </span>
+<span class="co">#&gt; * installing to library ‘/home/runner/work/_temp/Library’</span>
+<span class="co">#&gt; * installing *source* package ‘mypackage’ ...</span>
+<span class="co">#&gt; ** using staged installation</span>
+<span class="co">#&gt; ** R</span>
+<span class="co">#&gt; ** byte-compile and prepare package for lazy loading</span>
+<span class="co">#&gt; ** help</span>
+<span class="co">#&gt; *** installing help indices</span>
+<span class="co">#&gt; ** building package indices</span>
+<span class="co">#&gt; ** testing if installed package can be loaded from temporary location</span>
+<span class="co">#&gt; ** testing if installed package can be loaded from final location</span>
+<span class="co">#&gt; ** testing if installed package keeps a record of temporary installation path</span>
+<span class="co">#&gt; * DONE (mypackage)</span>
+<span class="co">#&gt; ✔ Setting active project to '&lt;no active project&gt;'</span></code></pre>
 <p>Now <code>"mypackage"</code> attaches “dplyr”, “glue”, “purrr” and “tibble” when it is loaded. If you want to overwrite the core (i.e. only use “tibble” and drop the other packages) just set <code>append = FALSE</code> in the above code chunk.</p>
 </div>
-<div id="add-your-own-exported-helper-function" class="section level3">
-<h3 class="hasAnchor">
-<a href="#add-your-own-exported-helper-function" class="anchor"></a>Add your own exported helper function</h3>
+<div class="section level4">
+<h4 id="add-your-own-exported-helper-function">Add your own exported helper function<a class="anchor" aria-label="anchor" href="#add-your-own-exported-helper-function"></a>
+</h4>
 <p>One of the strengths of a package is that you are able to save your helper functions inside the package and make them available in your code without littering the Global Environment.</p>
-<p>Let’s say you often use the negated version of <code><a href="https://rdrr.io/r/base/match.html">%in%</a></code> to select values that are <em>not</em> in a vector. The typical way to do it is <code>!value %in% vector</code>. This is somewhat annoying as it’s hard to read the code and see the exclamation mark at the beginning of the expression. So now we want to write and export our own little helper for the negated version of <code><a href="https://rdrr.io/r/base/match.html">%in%</a></code>, and we call it <code>%nin%</code>.</p>
+<p>Let’s say you often use the negated version of <code>%in%</code> to select values that are <em>not</em> in a vector. The typical way to do it is <code>!value %in% vector</code>. This is somewhat annoying as it’s hard to read the code and see the exclamation mark at the beginning of the expression. So now we want to write and export our own little helper for the negated version of <code>%in%</code>, and we call it <code>%nin%</code>.</p>
 <p>If you run this inside your project</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_r.html">use_r</a></span><span class="op">(</span><span class="st">"nin"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_r.html" class="external-link">use_r</a></span><span class="op">(</span><span class="st">"nin"</span><span class="op">)</span></code></pre></div>
 <p>it will create a new script <code>"R/nin.R"</code> and open it directly. Add the code of your helper function and don’t forget to export it with <code>#' @export</code> (this means the next time you document and install your package the new function will be exported and available for usage).</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co">#' @export</span>
-<span class="st">'%nin%'</span> <span class="op">&lt;-</span> <span class="fu">purrr</span><span class="fu">::</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/negate.html">negate</a></span><span class="op">(</span><span class="va">`%in%`</span><span class="op">)</span></code></pre></div>
+<span class="st">'%nin%'</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/funprog.html" class="external-link">Negate</a></span><span class="op">(</span><span class="va">`%in%`</span><span class="op">)</span></code></pre></div>
 <p>To update your package you should consider changing the package version to make more clear something changed by running</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_version.html">use_version</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_version.html" class="external-link">use_version</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>and afterwards documenting and installing the new version by running</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/document.html">document</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/install.html">install</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">document</a></span><span class="op">(</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://twitter.com/mrcaseb">Sebastian Carl</a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://twitter.com/mrcaseb" class="external-link">Sebastian Carl</a>.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>
