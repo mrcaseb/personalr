@@ -8,6 +8,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+options(cli.num_colors = 1, crayon.enabled = FALSE)
 ```
 
 # Acknowledgement
