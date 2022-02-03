@@ -84,7 +84,8 @@ setup_package <- function(path, packagename, core = NULL) {
     reload = FALSE,
     build = FALSE,
     force = TRUE,
-    quiet = FALSE
+    quiet = FALSE,
+    upgrade = FALSE
   )
 
   # Now activate project
