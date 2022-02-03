@@ -10,11 +10,8 @@ status](https://www.r-pkg.org/badges/version-ago/personalr)](https://CRAN.R-proj
 [![CRAN
 downloads](http://cranlogs.r-pkg.org/badges/grand-total/personalr)](https://CRAN.R-project.org/package=personalr)
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R build
-status](https://github.com/mrcaseb/personalr/workflows/R-CMD-check/badge.svg)](https://github.com/mrcaseb/personalr/actions)
-[![Travis build
-status](https://travis-ci.com/mrcaseb/personalr.svg?branch=master)](https://travis-ci.com/mrcaseb/personalr)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/mrcaseb/personalr/workflows/R-CMD-check/badge.svg)](https://github.com/mrcaseb/personalr/actions)
 <!-- badges: end -->
 
 ## Preface
@@ -46,15 +43,19 @@ functions.
 ## Installation
 
 You can install the released version of personalr from
-[CRAN](https://CRAN.R-project.org) with:
+[CRAN](https://cran.r-project.org/package=personalr) with:
 
-    install.packages("personalr")
+``` r
+install.packages("personalr")
+```
 
 You can install the development version from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/mrcaseb/personalr/) with:
 
-    if (!requireNamespace("remotes", quietly = TRUE)) {install.packages("remotes")}
-    remotes::install_github("mrcaseb/personalr")
+``` r
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("mrcaseb/personalr")
+```
 
 ## One more thing
 
