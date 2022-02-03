@@ -8,12 +8,12 @@
 \description{
 \if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
-Functions to setup a personal R package that
-    attaches given libraries and exports personal helper functions.
+Functions to setup a personal R package that attaches given libraries and exports personal helper functions.
 }
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://mrcaseb.github.io/personalr/index.html}
   \item \url{https://github.com/mrcaseb/personalr}
   \item Report bugs at \url{https://github.com/mrcaseb/personalr/issues}
 }
