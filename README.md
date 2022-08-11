@@ -11,7 +11,7 @@ status](https://www.r-pkg.org/badges/version-ago/personalr)](https://CRAN.R-proj
 downloads](http://cranlogs.r-pkg.org/badges/grand-total/personalr)](https://CRAN.R-project.org/package=personalr)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/mrcaseb/personalr/workflows/R-CMD-check/badge.svg)](https://github.com/mrcaseb/personalr/actions)
+[![R-CMD-check](https://github.com/mrcaseb/personalr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mrcaseb/personalr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Preface
@@ -53,8 +53,8 @@ You can install the development version from
 [GitHub](https://github.com/mrcaseb/personalr/) with:
 
 ``` r
-if (!require("remotes")) install.packages("remotes")
-remotes::install_github("mrcaseb/personalr")
+if (!require("pak")) install.packages("pak")
+pak::pak("mrcaseb/personalr")
 ```
 
 ## One more thing

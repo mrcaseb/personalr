@@ -12,3 +12,4 @@
 ^vignettes$
 ^\.travis\.yml$
 ^CRAN-RELEASE$
+^CRAN-SUBMISSION$
