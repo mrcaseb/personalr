@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 [![CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/personalr)](https://CRAN.R-project.org/package=personalr)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/mrcaseb/personalr/workflows/R-CMD-check/badge.svg)](https://github.com/mrcaseb/personalr/actions)
+[![R-CMD-check](https://github.com/mrcaseb/personalr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mrcaseb/personalr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Preface

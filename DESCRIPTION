@@ -1,6 +1,6 @@
 Package: personalr
 Title: Automated Personal Package Setup
-Version: 1.0.2.9000
+Version: 1.0.3
 Authors@R: 
     person("Sebastian", "Carl", , "mrcaseb@gmail.com", role = c("aut", "cre"))
 Description: Functions to setup a personal R package that attaches given
@@ -26,6 +26,5 @@ Suggests:
     dplyr,
     tibble
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1

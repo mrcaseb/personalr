@@ -6,7 +6,7 @@
 \alias{personalr-package}
 \title{personalr: Automated Personal Package Setup}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Functions to setup a personal R package that attaches given libraries and exports personal helper functions.
 }
