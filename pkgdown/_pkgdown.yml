@@ -16,7 +16,7 @@ template:
 
 authors:
   Sebastian Carl:
-    href: https://twitter.com/mrcaseb
+    href: https://bsky.app/profile/mrcaseb.nflverse.com
 
 home:
   title: An R Package for Automated Personal Package Setup
@@ -24,14 +24,16 @@ home:
 navbar:
   structure:
     left: [home, intro, reference, news, articles]
-    right: [sponsor, twitter, github]
+    right: [search, sponsor, twitter, github]
   components:
     twitter:
-      icon: "fab fa-twitter fa-lg"
-      href: http://twitter.com/mrcaseb
+      icon: "fa-brands fa-bluesky fa-lg"
+      href: https://bsky.app/profile/mrcaseb.nflverse.com
+      alt: Bluesky
     reference:
       text: "Functions"
       href: reference/index.html
     sponsor:
       icon: "fas fa-heart fa-lg"
       href: https://patreon.com/mrcaseb
+      alt: Patreon
