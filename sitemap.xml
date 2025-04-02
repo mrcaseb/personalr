@@ -1,39 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/articles/personalr.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/reference/personalr-package.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/reference/setup_package.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/personalr/reference/update_core.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mrcaseb.github.io/personalr/404.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/LICENSE-text.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/LICENSE.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/articles/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/articles/personalr.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/authors.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/news/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/reference/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/reference/personalr-package.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/reference/setup_package.html</loc></url>
+<url><loc>https://mrcaseb.github.io/personalr/reference/update_core.html</loc></url>
 </urlset>
+
