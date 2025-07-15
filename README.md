@@ -56,10 +56,3 @@ You can install the development version from
 if (!require("pak")) install.packages("pak")
 pak::pak("mrcaseb/personalr")
 ```
-
-## One more thing
-
-personalr is open source and it builds on top of other open source
-projects. However, maintaining this package will be a lot of work so I
-kindly ask you to consider donating at
-[patreon](https://www.patreon.com/mrcaseb).
